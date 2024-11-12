@@ -1,0 +1,41 @@
+
+.servicesPage{
+  height: 100vh;
+  width: 100vw;
+  background-color: #97491B;
+  color: #fff;
+  background-image:url(../imgs/icons/texturesmall.svg) ;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden !important;
+  
+  .packages{
+    height: 80%;
+    background-color: aqua;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .servicesPage{
+   
+   
+  }
+  .servicesPage .packages{
+    //delete it 
+    background-color: transparent;
+
+    display: flex;
+    max-width: 90vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2rem;
+ 
+  }}

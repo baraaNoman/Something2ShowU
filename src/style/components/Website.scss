@@ -1,0 +1,13 @@
+.WebsiteComponent{
+    
+    color: #fff;
+    overflow: hidden !important;
+    width: clamp(200px, 800px, 1000px);
+    height: max(200px , 5rem);
+    height: 100%;
+    background-color: gold;
+    background-image:url(../imgs/icons/texturesmall.svg) ;
+    video{
+        
+    }
+    }

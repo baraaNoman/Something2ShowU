@@ -1,0 +1,12 @@
+.SocailComponent{
+    
+        background-color: rgb(110, 196, 110);
+        color: #fff;
+        background-image:url(../imgs/icons/texturesmall.svg) ;
+        overflow: hidden !important;
+        width: clamp(200px, 800px, 1000px);
+        height: max(200px , 5rem);
+        height: 100%;
+        
+        
+}
