@@ -1,13 +1,14 @@
 .WebsiteComponent{
-    
-    color: #fff;
-    overflow: hidden !important;
-    width: clamp(200px, 800px, 1000px);
-    height: max(200px , 5rem);
-    height: 100%;
-    background-color: gold;
-    background-image:url(../imgs/icons/texturesmall.svg) ;
-    video{
-        
-    }
-    }
+    display: flex; /* Use flexbox for centering if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80vh;
+}
+  
+  video {
+    background-color: aquamarine;
+    width: 100%; /* Width will adjust automatically to maintain aspect ratio */
+    height: 100%; /* Height will adjust automatically */
+    object-fit: cover;
+    cursor: pointer;
+}

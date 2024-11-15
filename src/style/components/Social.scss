@@ -1,12 +1,16 @@
 .SocailComponent{
     
-        background-color: rgb(110, 196, 110);
-        color: #fff;
-        background-image:url(../imgs/icons/texturesmall.svg) ;
-        overflow: hidden !important;
-        width: clamp(200px, 800px, 1000px);
-        height: max(200px , 5rem);
-        height: 100%;
-        
-        
-}
+        display: flex; /* Use flexbox for centering if needed */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 80vh;
+      }
+      
+      video {
+        width: auto; /* Width will adjust automatically to maintain aspect ratio */
+        height: auto; /* Height will adjust automatically */
+        max-width: 100%; /* Prevent the video from exceeding the container width */
+        max-height: 100%; /* Prevent the video from exceeding the container height */
+        cursor: pointer;
+
+      }

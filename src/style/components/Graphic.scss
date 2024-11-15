@@ -1,10 +1,16 @@
 .graphicComponent{
-    background-color: #f0f0f0;
-    width: 80vh;  
-    background-image:url(../imgs/icons/texturesmall.svg) ;
-    overflow: hidden !important;
-    width: clamp(200px, 800px, 1000px);
-    height: max(200px , 5rem);
-    height: 100%;
-    
+    display: flex; /* Use flexbox for centering if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent overflow of the video */
+    height: 80vh;
+
+
 }
+  
+  video {
+  border: 2px solid #fff;
+    border-radius: 10px; /* Match the border-radius of the container */
+    cursor: pointer;
+
+  }

@@ -11,31 +11,36 @@
   
   .packages{
     height: 80%;
-    background-color: aqua;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 700px) {
   .servicesPage{
    
-   
+   .packages .package{
+      height: 700px;
+      width: 340px;
+      background-color: salmon;
+      display: none;
+    }
   }
   .servicesPage .packages{
     //delete it 
-    background-color: transparent;
-
+    gap: 4rem;
     display: flex;
     max-width: 90vw;
-    height: 80vh;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     margin-top: 2rem;
- 
+    
+  
+    
   }}
