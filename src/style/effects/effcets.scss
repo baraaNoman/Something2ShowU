@@ -4,3 +4,75 @@
     box-sizing: border-box;
     font-family: "Jost";
 }
+:root{
+  overflow-x: hidden;
+}
+.fullpage {
+    position: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    min-height: 100vh;
+    background-color:#282828; // Semi-transparent background
+    background-image: url('../imgs/icons/texturesmall.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Ensure it appears above other content
+    display: flex;
+    flex-direction: column;
+    animation: fromDown 1s ease;
+    
+  }
+.fullPage.visible {
+    transform: translateY(0); // Move to the original position when visible
+  }
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001; // Ensure it appears above the video
+    color: white;
+    svg{
+      font-size: 2rem;
+    }
+  }
+
+  @keyframes fromDown{
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fromRight{
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes fromLeft{
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes fromNoWhere{
+    0% {
+    opacity: 0;  
+    }
+    100% {
+      opacity: 1;  
+    }
+  }

@@ -11,7 +11,7 @@
   overflow: hidden !important;
   
   .headings{
-    margin-top: 2.5rem;
+    margin-top: 9.5rem;
     margin-inline: auto;
 
     h1{
@@ -35,13 +35,9 @@
     flex-direction: row-reverse;
     max-width:90% ;
     margin-inline: auto;
- //   background-color: aqua;
-    
-  .toRight{
     img{
-      color: green;
+      cursor: pointer;
     }
-  }
   }
   .brandicon{
     position: absolute;
@@ -61,4 +57,72 @@
       max-width: 2rem;
     }
   }  
+}
+@media only screen and (max-width: 1000px) {
+.Landing{
+
+  .headings{
+    margin-top: 9rem;
+h1{
+  font-size: 3rem;
+  width: 75%;
+  margin-inline: auto;
+ 
+}
+p{
+  font-size: 1.1rem;
+  max-width: 65%;
+  margin-inline: auto;
+}
+}
+.swipe{
+  img{
+    width: 2rem;
+  }
+}
+  .brandicon{
+  width: 5rem;
+}
+
+.SocialIcons{
+img{
+  max-width: 1.5rem;
+}
+}
+}}
+@media only screen and (max-width: 400px) {
+.Landing{
+
+  .headings{
+    margin-top: 7rem;
+
+h1{
+  font-size: 2rem;
+  width: 80%;
+}
+
+p{
+  font-size: 1.1rem;
+  max-width: 80%;
+  margin: 1rem auto;
+
+}
+}
+.swipe{
+  img{
+    width: 1.4rem;
+  }
+  p{
+    font-size: 0.8rem;
+  }
+}
+.brandicon{
+    max-width: 5rem;
+
+}
+.SocialIcons{
+  width: 90%;
+justify-content: space-evenly;
+}
+}
 }

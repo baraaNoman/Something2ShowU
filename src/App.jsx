@@ -1,4 +1,6 @@
 import React from 'react';
+import '../src/style/effects/effcets.scss';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Blogs from './pages/Blogs';
@@ -8,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" exact element={<Landing />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/services" element={<Services />} />
       </Routes>

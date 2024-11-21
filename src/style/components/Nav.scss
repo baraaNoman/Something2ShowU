@@ -1,12 +1,16 @@
 .nav{
  //   background-color: green;
     min-height: 10vh;
+    position: absolute;
     justify-content: left;
     display: flex;
     width: 80%;
     margin: 0 auto;
+    z-index: 99999;
     img{
         width: 7rem;    
+        cursor: pointer;
+        margin-left: 3rem;
 
 }
 }

@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import '../style/components/Social.scss';
+import '../style/effects/effcets.scss';
+
+import { IoCloseCircle } from "react-icons/io5";
 import socialBig from '../style/imgs/imgs/socialBig.webm'
 import socialSmall from '../style/imgs/imgs/socialSmall.webm'
+import Contact from '../components/contact.jsx'
+import socialimg1 from '../style/imgs/imgs/Instagram Post Mockup 1.png'
+import socialimg2 from '../style/imgs/imgs/Instagram Post Mockup 2.png'
+import socialimg3 from '../style/imgs/imgs/Instagram Post Mockup 3.png'
 
 const Social= () => {
   const [isBigScreen, setIsBigScreen] = useState(window.innerWidth > 1000);
-  
+  const [isFullPageVisible, setIsFullPageVisible] = useState(false); // State to manage visibility
+
+  const handleVideoClick = () => {
+    setIsFullPageVisible(true); // Show the full page on video click
+  };
+
+  const handleClose = () => {
+    setIsFullPageVisible(false); // Hide the full page on close button click
+  };
+
   const handleResize = () => {
     setIsBigScreen(window.innerWidth > 700);
   };
@@ -17,15 +33,34 @@ const Social= () => {
     };
   }, []);
 
-  const videoSrc = 'your-video-source.mp4'; // Replace with your actual video source
 
   return (
     <div className="graphicComponent">
       {isBigScreen ? (
-              <video src={socialBig} autoPlay  muted playsInline />
+              <video src={socialBig} autoPlay  muted playsInline onClick={handleVideoClick}  />
             ) : (
-              <video src={socialSmall} autoPlay  muted playsInline />
+              <video src={socialSmall} autoPlay  muted playsInline onClick={handleVideoClick}  />
       )}
+      {isFullPageVisible && (
+
+<div className="fullpage socialPage ">
+<button onClick={handleClose} className="closeButton">{<IoCloseCircle className='closeimg'/>
+}</button>     <div className="text">
+     <h1><span>Social<br></br></span>media content</h1>
+        <p>Looking to level up your social media presence? We create captivating and engaging content that helps you connect with your target audience, grow your following, and achieve your marketing goals. From eye-catching visuals and compelling captions to engaging video content and strategic storytelling, we tailor our content to your brand identity and industry.</p>
+ </div>
+
+ <div className="socialImg">
+   <img src={socialimg1} alt="socail media img" />
+   <img src={socialimg2} alt="socail media img" />
+   <img src={socialimg3} alt="socail media img" />
+ 
+   </div>
+   <Contact/>
+
+ </div> 
+ )}
+      
     </div>
   );
 };
