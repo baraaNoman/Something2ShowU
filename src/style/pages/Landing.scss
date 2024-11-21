@@ -13,6 +13,7 @@
   .headings{
     margin-top: 9.5rem;
     margin-inline: auto;
+    animation: fromNoWhere 1s ease;
 
     h1{
       font-size: 4rem;
@@ -35,14 +36,25 @@
     flex-direction: row-reverse;
     max-width:90% ;
     margin-inline: auto;
+    animation: fromDown 1s ease;
+
+    *{
+      &:hover{
+        animation: UpDown 0.5s ease;  
+            }
+    }
     img{
       cursor: pointer;
+
+   
     }
   }
   .brandicon{
     position: absolute;
     right: 0;
     z-index: 1;
+    animation: fromLeft 1s ease;
+
   }
   .SocialIcons{
     position: absolute;
@@ -53,8 +65,11 @@
     width: 25%;
     margin-inline: auto;
     justify-content: space-evenly;
+    animation: fromDown 0.5s ease;  
+
     img{
       max-width: 2rem;
+      
     }
   }  
 }

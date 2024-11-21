@@ -47,6 +47,11 @@ p{
   img{
     max-width: 500px;
     margin: 3rem auto;
+
+    &:hover{
+      animation: UpDown 0.2s ease;
+
+    }
     &:nth-child(1){
       margin-left:0rem ;
       animation: fromRight 1s ease;

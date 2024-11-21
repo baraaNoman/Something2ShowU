@@ -7,10 +7,12 @@
     width: 80%;
     margin: 0 auto;
     z-index: 99999;
+    animation: fromNoWhere 0.5s ease;  
+
     img{
         width: 7rem;    
         cursor: pointer;
-        margin-left: 3rem;
+        margin-left: 2.8rem;
 
 }
 }
