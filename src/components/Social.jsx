@@ -3,12 +3,13 @@ import '../style/components/Social.scss';
 import '../style/effects/effcets.scss';
 
 import { IoCloseCircle } from "react-icons/io5";
-import socialBig from '../style/imgs/imgs/socialBig.webm'
-import socialSmall from '../style/imgs/imgs/socialSmall.webm'
 import Contact from '../components/contact.jsx'
-import socialimg1 from '../style/imgs/imgs/Instagram Post Mockup 1.png'
-import socialimg2 from '../style/imgs/imgs/Instagram Post Mockup 2.png'
-import socialimg3 from '../style/imgs/imgs/Instagram Post Mockup 3.png'
+
+// import socialBig from '../style/imgs/imgs/socialBig.webm'
+// import socialSmall from '../style/imgs/imgs/socialSmall.webm'
+// import socialimg1 from '../style/imgs/imgs/Instagram Post Mockup 1.png'
+// import socialimg2 from '../style/imgs/imgs/Instagram Post Mockup 2.png'
+// import socialimg3 from '../style/imgs/imgs/Instagram Post Mockup 3.png'
 
 const Social= () => {
   const [isBigScreen, setIsBigScreen] = useState(window.innerWidth > 1000);
@@ -37,9 +38,9 @@ const Social= () => {
   return (
     <div className="graphicComponent">
       {isBigScreen ? (
-              <video src={socialBig} autoPlay  muted playsInline onClick={handleVideoClick}  />
+              <video src='/imgs/imgs/socialBig.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
             ) : (
-              <video src={socialSmall} autoPlay  muted playsInline onClick={handleVideoClick}  />
+              <video src='/imgs/imgs/socialSmall.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
       )}
       {isFullPageVisible && (
 
@@ -51,9 +52,9 @@ const Social= () => {
  </div>
 
  <div className="socialImg">
-   <img src={socialimg1} alt="socail media img" />
-   <img src={socialimg2} alt="socail media img" />
-   <img src={socialimg3} alt="socail media img" />
+   <img src='/imgs/imgs/Instagram Post Mockup 1.png' alt="socail media img" />
+   <img src='/imgs/imgs/Instagram Post Mockup 2.png' alt="socail media img" />
+   <img src='/imgs/imgs/Instagram Post Mockup 3.png' alt="socail media img" />
  
    </div>
    <Contact/>

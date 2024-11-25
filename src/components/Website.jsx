@@ -3,11 +3,11 @@ import '../style/components/Website.scss';
 import '../style/effects/effcets.scss';
 import { IoCloseCircle } from "react-icons/io5";
 
-import websiteBig from '../style/imgs/imgs/websiteBig.webm'
-import websiteSmall from '../style/imgs/imgs/websiteSmall.webm'
-import webimg1 from '../style/imgs/imgs/mocupWebsite1.png'
-import webimg2 from '../style/imgs/imgs/mocupWebsite2.png'
-import webimg3 from '../style/imgs/imgs/mocupWebsite3.png'
+//import websiteBig from '../style/imgs/imgs/websiteBig.webm'
+//import websiteSmall from '../style/imgs/imgs/websiteSmall.webm'
+//import webimg1 from '../style/imgs/imgs/mocupWebsite1.png'
+//import webimg2 from '../style/imgs/imgs/mocupWebsite2.png'
+//import webimg3 from '../style/imgs/imgs/mocupWebsite3.png'
 
 import Contact from '../components/contact.jsx'
 
@@ -38,10 +38,10 @@ const Website= () => {
   return (
     <div className="graphicComponent">
       {isBigScreen ? (
-              <video src={websiteBig} autoPlay  muted playsInline         onClick={handleVideoClick} // Show full page on video click
+              <video src='/imgs/imgs/websiteBig.webm' autoPlay  muted playsInline         onClick={handleVideoClick} // Show full page on video click
               />
             ) : (
-              <video src={websiteSmall} autoPlay  muted playsInline         onClick={handleVideoClick} // Show full page on video click
+              <video src='/imgs/imgs/websiteSmall.webm' autoPlay  muted playsInline         onClick={handleVideoClick} // Show full page on video click
               />
       )}
       {isFullPageVisible && (
@@ -55,9 +55,9 @@ const Website= () => {
       </div>
 
       <div className="Webimgs">
-        <img src={webimg2} alt="website design" />
-        <img src={webimg1} alt="website design" />
-        <img src={webimg3} alt="website design" />
+        <img src='/imgs/imgs/mocupWebsite1.png' alt="website design" />
+        <img src='/imgs/imgs/mocupWebsite2.png' alt="website design" />
+        <img src='/imgs/imgs/mocupWebsite3.png' alt="website design" />
  
         <Contact/>
         </div>

@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://www.something2showu.com/wp-content/themes/something2showu/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -40,5 +41,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "start": "react-scripts start",
+    "build": "react-scripts build && npm run copy-images",
+   "copy-images": "copyfiles -u 1 build/imgs/* /var/www/html/wp-content/themes/something2showu/imgs && copyfiles -u 1 build/imgs/imgs/* /var/www/html/wp-content/themes/something2showu/imgs/imgs && copyfiles -u 1 build/imgs/icons/* /var/www/html/wp-content/themes/something2showu/imgs/icons || echo 'Copying images failed!'",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  
   }
+
 }

@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../style/components/contact.scss';
 import '../style/effects/effcets.scss';
-import instagram from '../style/imgs/icons/instagram.svg'
-import behance from '../style/imgs/icons/behance.svg'
-import Linkedin from '../style/imgs/icons/linkedin.svg'
+
+
+//import instagram from '../style/imgs/icons/instagram.svg'
+//import behance from '../style/imgs/icons/behance.svg'
+//import Linkedin from '../style/imgs/icons/linkedin.svg'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -81,9 +83,9 @@ const ContactForm = () => {
         <button type="submit">Send</button>
       </form>
       <div className="SocialIcons">
-      <a href="https://www.behance.net/something2showu"><img src={behance} alt="behance" /></a>
-      <a href="https://www.instagram.com/something2showu/">  <img src={instagram} alt="instagram" /></a>
-      <a href="https://www.linkedin.com/company/something2showu/">  <img src={Linkedin} alt="Linkedin" /></a>
+      <a href="https://www.behance.net/something2showu"><img src='/imgs/icons/behance.svg' alt="behance" /></a>
+      <a href="https://www.instagram.com/something2showu/">  <img src='/imgs/icons/instagram.svg' alt="instagram" /></a>
+      <a href="https://www.linkedin.com/company/something2showu/">  <img src='/imgs/icons/Linkedin.svg' alt="Linkedin" /></a>
       </div>
 
     </div>

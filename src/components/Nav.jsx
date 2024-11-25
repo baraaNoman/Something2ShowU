@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import logo from '../style/imgs/logo.svg'
+// import logo from '../style/imgs/logo.svg'
 
 import '../style/components/Nav.scss'
 function Nav() {
@@ -8,7 +8,7 @@ function Nav() {
 
   return (
     <div className='nav'>
-        <img  src={logo} alt="logo"   onClick={() => navigate('/')} // Navigate to home on click
+        <img  src='/imgs/icons/logo.svg' alt="logo"   onClick={() => navigate('/')} // Navigate to home on click
 />
     </div>
   )
