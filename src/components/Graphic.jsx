@@ -40,7 +40,7 @@ const Graphic = () => {
       {isBigScreen ? (
               <video src='/imgs/imgs/GrahpicBig.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
             ) : (
-              <video src='/imgs/imgs/Graphicsmall.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
+              <video src='/imgs/imgs/graphicsmall.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
       )}
 
 {isFullPageVisible && (

@@ -85,7 +85,7 @@ const ContactForm = () => {
       <div className="SocialIcons">
       <a href="https://www.behance.net/something2showu"><img src='/imgs/icons/behance.svg' alt="behance" /></a>
       <a href="https://www.instagram.com/something2showu/">  <img src='/imgs/icons/instagram.svg' alt="instagram" /></a>
-      <a href="https://www.linkedin.com/company/something2showu/">  <img src='/imgs/icons/Linkedin.svg' alt="Linkedin" /></a>
+      <a href="https://www.linkedin.com/company/something2showu/">  <img src='/imgs/icons/linkedin.svg' alt="Linkedin/" /></a>
       </div>
 
     </div>
