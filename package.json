@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://www.something2showu.com/wp-content/themes/something2showu/",
+  "homepage": "https://www.something2showu.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

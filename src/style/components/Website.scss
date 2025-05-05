@@ -1,16 +1,40 @@
+$MainC:#97491B;
+$Black:#282828;
+$White:#F5F5F5;
+@keyframes rotateAndMove {
+  0% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform:  rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .WebsiteComponent{
-    display: flex; /* Use flexbox for centering if needed */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 80vh;
-}
+  display: flex; /* Use flexbox for centering if needed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border-radius: 1500px;
+
   
-video {
-    width: 100%; /* Width will adjust automatically to maintain aspect ratio */
-    height: 100%; /* Height will adjust automatically */
-    object-fit: cover;
-    cursor: pointer;
-}
+
+    .CoverImg {
+      cursor: pointer;
+      width: 300px;
+      height: 300px;
+      border:10px solid $White;
+      border-radius: 1500px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      animation: rotateAndMove 2s ease-in-out forwards;
+
+    img{
+      border-radius:150px ;
+    }}
+  }
+  
+
 .text{
   margin: 10rem auto 4rem;
   animation: fromNoWhere 1.5s ease;
@@ -98,4 +122,25 @@ p{
     }
   }
 }
+}
+@media only screen and (max-width: 1150px) {
+  .WebsiteComponent .CoverImg{
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .WebsiteComponent .CoverImg{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .WebsiteComponent .CoverImg{
+    width: 120px;
+    height: 120px;
+    border: 5px $White solid;
+
+  }
 }

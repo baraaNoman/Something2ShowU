@@ -1,14 +1,89 @@
+@import '../effects/effcets';
+
+$MainC:#97491B;
+$Black:#282828;
+$White:#F5F5F5;
 
 .servicesPage{
   height: 100vh;
   width: 100vw;
-  background-color: #97491B;
-  color: #fff;
+  background-color: $Black;
+  color: $White;
   background-image:url(../../../public/imgs/icons/texturesmall.svg) ;
   justify-content: center;
   text-align: center;
   overflow: hidden !important;
+  flex-direction: column;
+  background-repeat: repeat;
+  animation: slideBackground 60s linear infinite alternate;
+
+  .swipe {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 3rem;
+    align-items: end;
+    gap: 2.5rem;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;   
+    left: 0;
+    @media (max-width: 1150px) {
+      height: 10vh;
+      bottom: 0;   
+        width: 100vw;
+        flex-direction: row;
+
+    } 
+    * {
+      &:hover {
+        animation: UpDown 0.5s ease;  
+      }
+    }
+    
+    .toLeft, .toRight, .toUp {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+    
+    img {
+      width: 3rem;
+      max-height: 3rem;
+      opacity: 0.7;
+      margin-bottom: 0.4rem;
+      z-index: 100;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+    
+    p {
+      color: $White;
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+  }
   
+  .TypeOfServices{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    .package{
+      
+    }
+  }
+ 
   .packages{
     height: 80%;
     margin-inline: auto;
@@ -18,7 +93,22 @@
     gap: 1rem;
     margin-top: 4rem;
 
+   
+
   }
+}
+
+.servicesPage .packages{
+  //delete it 
+  gap: 4rem;
+  display: flex;
+  max-width: 90vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 4rem;
+
+  
 }
 
 @media only screen and (min-width: 700px) {
@@ -27,20 +117,38 @@
    .packages .package{
       height: 700px;
       width: 340px;
-      background-color: salmon;
+      background-color: green;;
       display: none;
     }
   }
-  .servicesPage .packages{
-    //delete it 
-    gap: 4rem;
-    display: flex;
-    max-width: 90vw;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 4rem;
+ 
+}
+  @media only screen and (max-width: 650px) {
+    .packages{
+      margin-top: 2rem !important;
+    }
+    .TypeOfServices{
+      flex-direction: column;
+      gap: 2rem !important;
     
-  
-    
-  }}
+    }
+//    .swipe{
+      img{
+        width: 2.5rem;
+      }
+      p{
+        font-size: 0.8rem;
+        width: 80%;
+        margin-inline: auto;
+      }
+  //  }
+  }
+ 
+  @keyframes slideBackground {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 100%;
+    }
+  }

@@ -4,13 +4,12 @@ import '../style/effects/effcets.scss';
 
 import { IoCloseCircle } from "react-icons/io5";
 
-//import GrahpicBig from '../style/imgs/imgs/GrahpicBig.webm'
-//import Graphicsmall from '../style/imgs/imgs/graphicsmall.webm'
-//import graphicimg1 from '../style/imgs/imgs/mocupGraphic1.png'
-//import graphicimg2 from '../style/imgs/imgs/mocupGraphic2.png'
-//import graphicimg3 from '../style/imgs/imgs/mocupGraphic3.png'
+import GrahpicImg from '../style/imgs/imgs/graphic.png'
+import graphicimg1 from '../style/imgs/imgs/mocupGraphic1.png'
+import graphicimg2 from '../style/imgs/imgs/mocupGraphic2.png'
+import graphicimg3 from '../style/imgs/imgs/mocupGraphic3.png'
 
-import Contact from '../components/contact.jsx'
+import Contact from '../components/ContactForm.jsx'
 
 const Graphic = () => {
   const [isBigScreen, setIsBigScreen] = useState(window.innerWidth > 1000);
@@ -37,11 +36,8 @@ const Graphic = () => {
 
   return (
     <div className="graphicComponent">
-      {isBigScreen ? (
-              <video src='/imgs/imgs/GrahpicBig.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
-            ) : (
-              <video src='/imgs/imgs/graphicsmall.webm' autoPlay  muted playsInline onClick={handleVideoClick}  />
-      )}
+                        <img className='CoverImg'src={GrahpicImg}          onClick={handleVideoClick} ></img> 
+      
 
 {isFullPageVisible && (
 
@@ -53,9 +49,9 @@ const Graphic = () => {
  </div>
 
  <div className="graphicimg">
-   <img src='/imgs/imgs/mocupGraphic1.png' alt="Graphic design img" />
-   <img src='/imgs/imgs/mocupGraphic2.png' alt="Graphic design img" />
-   <img src='/imgs/imgs/mocupGraphic3.png' alt="Graphic design img" />
+   <img src={graphicimg1} alt="Graphic design img" />
+   <img src={graphicimg2} alt="Graphic design img" />
+   <img src={graphicimg3} alt="Graphic design img" />
    <Contact/>
    </div>
  </div> 

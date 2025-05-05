@@ -2,20 +2,21 @@
 
 .contactForm {
     max-width: 600px; /* Set a maximum width for the form */
-    margin: 3rem auto; /* Center the form horizontally */
+    margin-inline:  auto; /* Center the form horizontally */
     padding: 20px; /* Add padding around the form */
     border-radius: 8px; /* Rounded corners */
     width: 80%;
   }
   .SocialIcons{
     margin-top: 1rem;
-   // background-color: gold;
-    justify-content: space-around;
+    justify-content: center;
     display: flex;
+    gap: 1rem;
     img{
         width: 2rem;
     }
-  }
+    
+}
   
   .contactForm h2 {
     text-align: center; /* Center the heading */
@@ -65,7 +66,8 @@
     font-size: 16px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition for background color */
-  }
+  
+}
   
   .contactForm button:hover {
     background-color: white; /* Darker blue on hover */
