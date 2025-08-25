@@ -1,96 +1,140 @@
-/* contact.scss */
+$Brown:#95481B;
+$padge:#E0C9B0;
+$Black:#282828;
+$White:#DFE8E6;
 
-.contactForm {
-    max-width: 600px; /* Set a maximum width for the form */
-    margin-inline:  auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding around the form */
-    border-radius: 8px; /* Rounded corners */
-    width: 80%;
-  }
-  .SocialIcons{
-    margin-top: 1rem;
-    justify-content: center;
+
+
+.ContactForm {
+  box-shadow: inset 5.19px 5.19px 15.56px -3.32px #ffffff0f, 
+              inset -10.38px -5.19px 5.19px -3.32px #ffffff4a, 
+              inset 0px 0px 13.28px -3.32px #ffffff21;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  //max-height: 500px;
+  width: 400px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+
+  form{
     display: flex;
-    gap: 1rem;
-    img{
-        width: 2rem;
-    }
-    
-}
-  
-  .contactForm h2 {
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Space below the heading */
-    font-family: 'Arial', sans-serif; /* Font family */
-    color: white; /* Dark color for the heading */
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-  
-  .contactForm form {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    gap: 15px;
   }
-  
-  .contactForm input,
-  .contactForm textarea {
-    padding: 10px; /* Padding inside input fields */
-    margin-bottom: 15px; /* Space between fields */
-    border: 1px solid #4C454C; /* Light gray border */
-    border-radius: 4px; /* Slightly rounded corners */
-    font-size: 16px; /* Font size */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-    width: 100%; /* Full width for inputs and textareas */
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-    background-color: #4C454C;
+  input, textarea, button {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    resize: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
 
-}
-  
-  .contactForm input:focus,
-  .contactForm textarea:focus {
-    border-color: #4C454C; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-    background-color: white;
-    color: #000000;
-}
-  
-  .contactForm button {
-    padding: 10px; /* Padding inside button */
-    background-color: #4C454C; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  
-}
-  
-  .contactForm button:hover {
-    background-color: white; /* Darker blue on hover */
-    color: #4C454C;
-}
-  
-  /* Responsive Styles */
-  @media (max-width: 600px) {
-    .contactForm {
-      padding: 15px; /* Reduce padding on smaller screens */
-      width: 80%;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
     }
-  
-    .contactForm h2 {
-      font-size: 2em; /* Adjust heading size */
-    }
-  
-    .contactForm input,
-    .contactForm textarea {
-      font-size: 14px; /* Slightly smaller font size */
-    }
-  
-    .contactForm button {
-      font-size: 14px; /* Adjust button font size */
+
+    &:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
     }
   }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  button {
+  
+        background-color: transparent;
+        color: $White;
+        border: 1px solid $White;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 1.5s ease;
+        text-transform: uppercase;
+
+    &:hover {
+      transform: translateY(-2px);
+      background-color: $Brown;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .calendly-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .back-button {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .popup-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 350px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      color: #333;
+
+      h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      button {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #5a67d8;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+.ContactForm {
+width: 350px;
+}
+}

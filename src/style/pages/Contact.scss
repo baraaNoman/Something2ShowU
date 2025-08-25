@@ -1,257 +1,143 @@
-$MainC:#97491B;
+$Brown:#95481B;
+$padge:#E0C9B0;
 $Black:#282828;
-$White:#F5F5F5;
+$White:#DFE8E6;
 
 .ContactPage{
-    height: 100vh;
-    width: 100vw;
     background-color: $Black;
-    color: $White;
-    background-image:url(../../../public/imgs/icons/texturesmall.svg) ;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden !important;
-    flex-direction: column;
-    background-repeat: repeat;
-    animation: slideBackground 60s linear infinite alternate;
-  
-    .swipe {
-      display: flex;
-      justify-content: center;
-      padding: 1rem 3rem;
-      align-items: end;
-      gap: 2.5rem;
-      position: absolute;
-      flex-direction: column;
-      height: 100vh;   
-      position: absolute;
-      left: 0;
-      @media (max-width: 1150px) {
-        height: 10vh;
-        bottom: 0;   
-          width: 100vw;
-          flex-direction: row;
-  
-      } 
-      * {
-        &:hover {
-          animation: UpDown 0.5s ease;  
-        }
-      }
-      
-      .toLeft, .toRight, .toDown {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.3s ease;
-        
-        &:hover {
-          transform: translateY(-5px);
-        }
-      }
-      
-      img {
-        width: 3rem;
-        max-height: 3rem;
-        opacity: 0.7;
-        margin-bottom: 0.4rem;
-        z-index: 100;
-        transition: opacity 0.3s ease;
-        
-        &:hover {
-          opacity: 1;
-        }
-      }
-      
-      p {
-        color: $White;
-        font-weight: 300;
-        font-size: 0.9rem;
-        letter-spacing: 0.5px;
-      }
-    }
-
-    .brandicon{
-        position: absolute;
-        right: 0;
-        z-index: 1;
-        animation: fromLeft 1s ease;
-    
-      }
-    
-      .Sleft{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-      }
-
-      
-}
-.contactFormPage{
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    overflow-x: hidden !important;
+   .sizer{
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        margin-top: 10rem;
+}
+      a {
+        text-decoration: none;
+        color: $White;
+        display: block; 
+        min-width: 50px;
+        letter-spacing: 5px;
+         }
+
+    .Titels{
+        color: $White;
+        max-width:55vw;
+         h1{
+            font-weight: bold;
+            font-size: 3.5rem;
+            text-shadow: -4px 6px 0px #95481b;
+            text-transform: uppercase;
+            }
+       p{
+        margin: 2rem 0 ;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        width: 70%;
+
+       } 
+
+     
+  button {
+  
+        background-color: transparent;
+        color: $White;
+        border: 1px solid $White;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 1.5s ease;
+        text-transform: uppercase;
+        padding: 0.7rem 4rem;
+
+    &:hover {
+      transform: translateY(-2px);
+      background-color: $Brown;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+    .SocialIcons{
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        margin-left: 10px;
+
+        a {
+            color: $White;
+            transition: color 0.3s ease;
+
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+.sizer{
+  display: flex;
+  flex-direction: column;
+margin: 4rem auto !important;  
+  
+  .Titels{
     justify-content: center;
     text-align: center;
     align-items: center;
-    height:60vh;
-    background-color: $White;
-    width: 40vw;
-    margin: 10rem auto 2rem;
-    border-radius: 25px;
-    @media (max-width: 1150px) {
-      margin: 5rem auto 2rem;
-    }
-    h2{
-        color: $Black;
-        font-size: 2rem;
-        span{
-            color: $MainC;
-        }
+    margin: 5rem 0;
+        max-width: 80vw;
+
+    h1{
+      font-size: 3.5rem;
     }
     p{
-        color: $Black;
+      width: 100%;
     }
-    form {
-        margin-top: 1rem;
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        input{
-            padding: 10px; /* Padding inside input fields */
-            margin-bottom: 15px; /* Space between fields */
-            border-radius: 4px; /* Slightly rounded corners */
-            font-size: 16px; /* Font size */
-            transition: border-color 0.3s; /* Smooth transition for border color */
-            width: 30vw; /* Full width for inputs and textareas */
-            box-sizing: border-box; /* Include padding and border in the element's total width */
-            background-color: none;
-            color: $White;
-            resize: none;
-            border: none;
-            border-bottom: 1px solid $Black;
-            outline: none; /* Remove default outline */
-            color: $Black;
-            background-color: $White;
-            
-        }
-        textarea{
-            padding: 10px; /* Padding inside input fields */
-            margin-bottom: 15px; /* Space between fields */
-            border-radius: 4px; /* Slightly rounded corners */
-            font-size: 16px; /* Font size */
-            transition: border-color 0.3s; /* Smooth transition for border color */
-            width: 30vw; /* Full width for inputs and textareas */
-            box-sizing: border-box; /* Include padding and border in the element's total width */
-            background-color: none;
-            color: $White;
-            resize: none;
-            border: none;
-            border-bottom: 1px solid $Black;
-            outline: none; /* Remove default outline */
-            color: $Black;
-            background-color: $White;
 
-            &::placeholder{
-                background: none;
-                
-            }
-          }
-          .SocialIcons{
-            margin-top: 2rem !important;
-          }
-          button{
-            padding: 0.5rem 5rem;
-            background: $MainC;
-            color: $White;
-            border: none;
-            border-radius: 10px;
-            &:hover{
-                border-radius: 15px;
-                border: 2px solid $MainC;
-                background-color: $White;
-                color: $MainC;
-                font-weight: bold;
-            }
-        }
+    .SocialIcons{
+      justify-content: center;
     }
-    }
-    @media only screen and (max-width: 700px) {
-    .ContactPage{
-        overflow: hidden !important;
-
-        .brandicon{
-            right: -50px;
-        }
-        .mianContactForm{
-            display: flex;
-            flex-direction: column;
-            .SocialIcons{
-              margin-top: 0 !important;
-            }  
-        .contactFormPage{
-            height: auto;
-            background: none;
-            width: 90vw;
-            z-index: 85;
-           
-            h2{
-                color: $White;
-                font-weight: 500;
-            }
-            p{
-                display: none;
-            
-            
-            }
-
-            input{
-                background: none;
-                border-bottom: 1px solid $White;
-                width: 300px;
-                color: $White;
-
-            }
-            textarea{
-                background: none;
-                border-bottom: 1px solid $White;
-                width: 300px;
-                color: $White;
-            }
-
-            
-        }
-
-
-    }
-   
+  }
+}
 }
 
+@media only screen and (max-width: 800px) {
+.sizer{
+margin: 1rem auto !important;  
 
-    }
-    .alert {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background:$MainC;
-        border: 1px solid #ccc;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
-        z-index: 1000;
-        border-radius: 20px;
-        z-index: 0;
-    }
+  
+  .Titels{
     
-    
-    @keyframes slideBackground {
-      0% {
-        background-position-x: 0%;
-      }
-      100% {
-        background-position-x: 100%;
-      }
+    margin: 5rem 0;
+        max-width: 80vw;
+
+    h1{
+      font-size: 2.5rem;
     }
+    p{
+      width: 100%;
+    }
+
+  }
+}
+}
+
+@media only screen and (max-width: 500px) {
+.sizer{
+
+  
+  .Titels{
+    
+    margin: 5rem 0;
+        max-width: 80vw;
+
+    h1{
+      font-size: 1.7rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+
+  }
+}
+}

@@ -5,7 +5,8 @@
     font-family: "Jost";
 }
 :root{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overflow-x: none !important;
 }
 .fullpage {
     position: block;

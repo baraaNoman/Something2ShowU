@@ -4,12 +4,18 @@
   "homepage": "https://www.something2showu.com",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.23.9",
     "react": "^18.3.1",
+    "react-calendly": "^4.4.0",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.28.0",
@@ -22,7 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "copy-images": "copyfiles -u 1 build/imgs/* /var/www/html/wp-content/themes/something2showu/imgs && copyfiles -u 1 build/imgs/imgs/* /var/www/html/wp-content/themes/something2showu/imgs/imgs && copyfiles -u 1 build/imgs/icons/* /var/www/html/wp-content/themes/something2showu/imgs/icons || echo 'Copying images failed!'"
   },
   "eslintConfig": {
     "extends": [
@@ -43,13 +50,6 @@
     ]
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "start": "react-scripts start",
-    "build": "react-scripts build && npm run copy-images",
-   "copy-images": "copyfiles -u 1 build/imgs/* /var/www/html/wp-content/themes/something2showu/imgs && copyfiles -u 1 build/imgs/imgs/* /var/www/html/wp-content/themes/something2showu/imgs/imgs && copyfiles -u 1 build/imgs/icons/* /var/www/html/wp-content/themes/something2showu/imgs/icons || echo 'Copying images failed!'",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  
+    "copyfiles": "^2.4.1"
   }
-
 }

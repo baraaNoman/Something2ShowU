@@ -1,169 +1,438 @@
-$MainC:#97491B;
+$Brown:#95481B;
+$padge:#E0C9B0;
 $Black:#282828;
-$White:#F5F5F5;
+$White:#DFE8E6;
 
-
-
-@import '../effects/effcets';
-
-.Landing{
-  height: 100vh;
-  width: 100vw;
-  background-color: #97491B;
-  color: #F5F5F5;
-  background-image:url(../../../public/imgs/icons/texturesmall.svg) ;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden !important;
-  flex-direction: column;
-  background-repeat: repeat;
-  animation: slideBackground 60s linear infinite alternate;
-
-  .headings{
-    margin-top: 9.5rem;
-    margin-inline: auto;
-    animation: fromNoWhere 1s ease;
-
-    h1{
-      font-size: 4rem;
-      text-transform: capitalize;
-    }
-    p{
-      font-size: 1.5rem;
-      max-width: 60%;
-      margin-inline: auto;
-      text-transform: lowercase;
-
-    }
-  }
-  .swipe{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    max-width:90% ;
-    margin-inline: auto;
-    animation: fromDown 1s ease;
-    position: absolute;
-    gap: 1rem;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-
-    *{
-      &:hover{
-        animation: UpDown 0.5s ease;  
-            }
-    }
-    img{
-      cursor: pointer;
-
-   
-    }
-  }
-  .brandicon{
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    animation: fromLeft 1s ease;
-
-  }
-  .SocialIcons{
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    left: 0;
-    display: flex;
-    width: 25%;
-    margin-inline: auto;
-    justify-content: space-evenly;
-    animation: fromDown 0.5s ease;  
-
-    img{
-      max-width: 2rem;
-      
-    }
-  }  
+::-webkit-scrollbar {
+  display: none;
 }
-@media only screen and (max-width: 1000px) {
-.Landing{
 
-  .headings{
-    margin-top: 9rem;
-h1{
-  font-size: 3.5rem;
-  width: 75%;
-  margin-inline: auto;
- 
+/* Add smooth scrolling to the entire document */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
 }
-p{
-  font-size: 1.1rem;
-  max-width: 65%;
-  margin-inline: auto;
-}
-}
-.swipe{
-  img{
- //   width: 2rem;
+
+/* Optional: Add this if you want custom scroll behavior */
+.LandingBody {
+  /* Your existing styles */
+  
+  /* Custom scroll offset for specific sections */
+  [id] {
+    scroll-margin-top: 10vh;
   }
 }
-  .brandicon{
-  width: 5rem;
-}
 
-.SocialIcons{
-img{
-  max-width: 1.5rem;
-}
-}
-}}
-@media only screen and (max-width: 600px) {
-.Landing{
-
-  .headings{
-justify-content: center;
-align-items: center;
-text-align: center;
-h1{
-  font-size: 2.1rem;
-  width: 80%;
-}
-
-p{
-  font-size: 1.1rem;
-  max-width: 80%;
-  margin: 1rem auto;
-
-}
-}
-.swipe{
-  img{
-    width: 2.5rem;
-  }
-  p{
-    font-size: 0.8rem;
-    width: 80%;
-    margin-inline: auto;
-  }
-}
-.brandicon{
-    max-width: 5rem;
-
-}
-.SocialIcons{
-  width: 90%;
-justify-content: space-evenly;
-}
-}
-}
-
- 
-@keyframes slideBackground {
+/* Bounce scroll animation */
+@keyframes bounceScroll {
   0% {
-    background-position-y: 0%;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(10px);
   }
   100% {
-    background-position-y: 100%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gentleBounce {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply bounce animation to sections when they come into view */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &.scroll-bounce-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: gentleBounce 1s ease-out;
+  }
+}
+
+/* Specific bounce for click navigation */
+.bounce-scroll-target {
+  animation: bounceScroll 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.LandingBody{
+  background-color: $Black;
+  color: $padge;
+  font-family: 'jost';
+
+  a {
+    text-decoration: none;
+    color: $White;
+    display: block;
+    min-width: 50px;
+    letter-spacing: 5px;
+  }
+
+  .FirstSection{
+    padding: 10rem 8%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    opacity: 1 !important;
+    transform: none !important;
+
+    h1{
+      font-weight: bold;
+      font-size: 5.5rem;
+      line-height: 1;
+      text-shadow: -4px 6px 0px #95481b;
+      text-transform: capitalize;
+    }
+
+    p{
+      font-weight: 300;
+      font-size: 1.2rem;
+      padding: 2rem 0 1rem;
+      margin-inline: auto;
+      width: 70%;
+      font-weight: 500;
+      letter-spacing: 5.04px;
+    }
+
+        button {
+  
+        background-color: transparent;
+        color: $White;
+        border: 1px solid $White;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 1.5s ease;
+        text-transform: uppercase;
+        padding: 0.6rem 4rem;
+                letter-spacing: 3px;
+
+
+    &:hover {
+      transform: translateY(-2px);
+      background-color: $Brown;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+  }
+
+  .SecondSection{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    display: flex;
+
+    .LeftIntro{
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      align-items: left;
+      padding-left: 2rem;
+
+      h2{
+        font-weight: bold;
+        font-size: 4.5rem;
+        line-height: 1;
+        text-shadow: -4px 6px 0px #95481b;
+        text-transform: capitalize;
+      }
+      
+      p{ 
+        font-weight: 300;
+        font-size: 1.2rem;
+        padding: 2rem 0 1rem;
+        margin-inline: auto;
+        font-weight: 500;
+        letter-spacing: 5.04px;
+      }
+      
+      button {
+  
+        background-color: transparent;
+        color: $White;
+        border: 1px solid $White;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 1.5s ease;
+        text-transform: uppercase;
+padding: .6rem 3rem;     
+           letter-spacing: 3px;
+
+
+    &:hover {
+      transform: translateY(-2px);
+      background-color: $Brown;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+    }
+
+    .righIntro{
+      img{
+        width: 30rem;
+        transform: translateY(-250px);
+        transition: transform 0.5s ease;
+
+        .bounce-scroll-target & {
+          animation: gentleBounce 1s ease-out;
+        }
+      }
+    }
+  }
+
+  .ThirdSection{
+    margin: 2rem auto 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .PackagesCards{
+      display: flex;
+      gap: 5rem;
+      flex-wrap: wrap;
+      max-width: 90vw;
+      justify-content: center;
+      
+      .package{
+        margin-top: 3rem;
+        box-shadow: inset 5.19px 5.19px 15.56px -3.32px rgba(255, 255, 255, 0.2), 
+                    inset -10.38px -5.19px 5.19px -3.32px rgb(255 255 255 / 12%), 
+                    inset 0px 0px 13.28px -3.32px #ffffff33;
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        width: 320px;
+        background: $Black;
+        border-radius: 15px;
+        border: 2px solid $Brown;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-5px);
+        }
+        
+        .bounce-scroll-target & {
+          animation: gentleBounce 1s ease-out;
+        }
+      
+        h3{
+          font-size: 2.5rem;
+          padding: 0.2rem;
+        }
+        
+        p{
+          margin: 1rem;
+          text-transform: capitalize;
+          font-size: 1rem;
+          line-height: 25px;
+        }
+        
+        button{
+          margin-top: 0.5rem;
+          padding: 0.4rem 4rem;
+          border-radius: 25px;
+          border: solid 1px $Brown;
+          background: none;
+          color: $White;
+          background-color: #1a1a1a1a;
+          border-radius: 70px;
+          box-shadow: inset 5.19px 5.19px 15.56px -3.32px #ffffff33, 
+                      inset -10.38px -5.19px 5.19px -3.32px #ffffff80, 
+                      inset 0px 0px 13.28px -3.32px #ffffff33;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  .FourthSection{
+    margin-top: 1.5rem;
+    min-width: 200vw;
+    
+    .PackageName {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      
+      .firstH3{ 
+        animation: a-text-scroll 100s linear infinite;
+      }
+      
+      .secondH3{ 
+        animation: a-text-scroll 80s linear infinite;
+      }
+      
+      .thirdH3{
+        animation: a-text-scroll 60s linear infinite;
+      }
+
+      h4 {
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 7em;
+        font-weight: 100;
+        flex-shrink: 0;
+        padding: 0 10px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        text-shadow: -9px 11px 0px #95481b;
+      }
+    }
+
+    /* Animation keyframes */
+    @keyframes a-text-scroll {
+      0% {
+        transform: translate3d(-0%, 0, 0);
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0vh;
+  }
+
+  .LandingBody{
+    [id] {
+      scroll-margin-top: 0;
+    }
+    
+    .FirstSection {
+      padding: 7rem 8%;
+
+      h1{
+        font-size: 4.5rem;
+      }
+      
+      p{
+        width: 100%;
+      }
+    }
+    
+    #SecondSection {
+      display: flex;
+      flex-direction: column-reverse;
+      
+      .LeftIntro{
+        transform: translateY(-150px);
+      }
+      
+      .righIntro{
+        position: relative;
+        right: 0;
+        width: 100%;
+        text-align: end;
+        
+        img{
+          transform: translateY(-150px);
+          width: 20rem;
+        }
+      }
+    }
+
+    #ThirdSection{
+      transform: translateY(-200px);
+
+      .PackagesTitel{
+        img{ 
+          width: 15rem;
+        }
+      }
+    }
+    
+    #FourthSection{
+      transform: translateY(-200px);
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+  }
+
+  .LandingBody{
+    [id] {
+      scroll-margin-top: 10vh;
+    }
+    
+    .FirstSection {
+      padding: 7rem 0;
+
+      h1{
+        font-size: 2.5rem;
+      }
+      
+      p{
+        width: 95%;
+        font-size:0.8rem;
+      }
+    }
+
+    #SecondSection {
+      .LeftIntro{
+        h2{
+          font-size: 2.5rem;
+        }
+        
+        p{
+          font-size: 0.8rem;
+        }
+      }
+      
+      .righIntro{
+        img{
+          width: 10rem;
+        }
+      }
+    }
+
+    .FourthSection{
+      .PackageName{
+        h4{
+          font-size: 4em;
+        }
+      }
+    }
   }
 }
